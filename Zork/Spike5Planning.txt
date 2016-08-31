@@ -1,0 +1,28 @@
+-----------
+- Classes -
+-----------
+CommandProcessor
+Command
+Move
+Transfer
+Menu
+HighScore
+HallOfFame
+Player
+MapLoader
+Location
+Inventory
+Bag
+Item
+Help
+Start
+About
+---------------------
+- Class Interaction -
+---------------------
+Player & Location have Inventory
+Bag is-a Item & Inventory
+CommandProcessor takes input and uses an object dependant on keywords
+CommandPrcoessor has a list of Command
+Move and Transfer inherit Command
+Player should be able to access Help, About, HighScores and Start from Menu
