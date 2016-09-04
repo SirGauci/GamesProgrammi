@@ -1,15 +1,3 @@
-﻿  Player.cpp
-  Location.cpp
-  Link.cpp
-  Item.cpp
-  GameObject.cpp
-  Generating Code...
-f:\daniel\documents\code\games programming\zork\zork\link.cpp(62): warning C4715: 'Link::oppositeDirection': not all control paths return a value
-  Compiling...
-  Inventory.cpp
-  Generating Code...
-f:\daniel\documents\code\games programming\zork\zork\inventory.cpp(24): warning C4715: 'Inventory::Access': not all control paths return a value
-  Skipping... (no relevant changes detected)
-  Zork.cpp
+﻿  Location.cpp
   Zork.vcxproj -> F:\Daniel\Documents\Code\Games Programming\Zork\Debug\Zork.exe
   Zork.vcxproj -> F:\Daniel\Documents\Code\Games Programming\Zork\Debug\Zork.pdb (Full PDB)

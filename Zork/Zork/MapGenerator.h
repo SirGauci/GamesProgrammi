@@ -10,6 +10,7 @@ public:
 	~MapGenerator();
 	void CreateMap();
 private:
+	Location LookupLocation(std::string input);
 	std::vector<Location> prMap;
 };
 

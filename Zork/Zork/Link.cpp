@@ -23,39 +23,39 @@ std::string Link::oppositeDirection(std::string input)
 	{
 		return "S";
 	}
-	if (input == "S")
+	else if (input == "S")
 	{
 		return "N";
 	}
-	if (input == "E")
+	else if (input == "E")
 	{
 		return "W";
 	}
-	if (input == "W")
+	else  if (input == "W")
 	{
 		return "E";
 	}
-	if (input == "NW")
+	else if (input == "NW")
 	{
 		return "SE";
 	}
-	if (input == "NE")
+	else if (input == "NE")
 	{
 		return "SW";
 	}
-	if (input == "SE")
+	else if (input == "SE")
 	{
 		return "NW";
 	}
-	if (input == "SW")
+	else if (input == "SW")
 	{
 		return "NE";
 	}
-	if (input == "U")
+	else if (input == "U")
 	{
 		return "D";
 	}
-	if (input == "D")
+	else if (input == "D")
 	{
 		return "U";
 	}

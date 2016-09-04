@@ -10,6 +10,7 @@ public:
 	Location(std::string name, std::string description);
 	~Location();
 	void setPath(std::string key, Location value);
+	std::string getName();
 private:
 	std::string prName;
 	std::string prDescription;
