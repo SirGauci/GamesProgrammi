@@ -153,7 +153,6 @@
     <ClInclude Include="HighScore.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
-    <ClInclude Include="Link.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MapGenerator.h" />
@@ -173,7 +172,6 @@
     <ClCompile Include="HighScore.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
-    <ClCompile Include="Link.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MapGenerator.cpp" />

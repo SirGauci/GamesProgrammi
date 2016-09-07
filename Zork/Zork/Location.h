@@ -9,7 +9,7 @@ public:
 	Location();
 	Location(std::string name, std::string description);
 	~Location();
-	void setPath(std::string key, Location value);
+	void setPath(std::string key, Location* value);
 	std::string getName();
 private:
 	std::string prName;

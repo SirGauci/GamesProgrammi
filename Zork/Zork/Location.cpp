@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Location.h"
 #include <iostream>
+#include <utility>
+#include <vector>
 
 Location::Location(){}
 
@@ -12,15 +14,10 @@ Location::Location(std::string name, std::string description)
 
 Location::~Location(){}
 
-void Location::setPath(std::string key, Location value)
+// Adds a *location with a direction (key) to a map
+void Location::setPath(std::string key, Location* value)
 {
-	std::cout << key;
-	std::cout << value.getName();
-	//prPath.insert(prPath.begin(), std::pair<std::string, Location>(key, value));
-	//prPath.insert(prPath.begin(), std::make_pair(key, value));
-	//prPath.emplace(key, value);
-	//std::cout << prPath["N"].getName();
-	std::cout << "Done\n";
+	prPath.insert(prPath.begin(), std::make_pair(key, *value));
 }
 
 std::string Location::getName()

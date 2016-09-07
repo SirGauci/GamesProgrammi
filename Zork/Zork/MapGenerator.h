@@ -1,5 +1,4 @@
 #pragma once
-#include "Link.h"
 #include "Location.h"
 #include <vector>
 
@@ -10,7 +9,8 @@ public:
 	~MapGenerator();
 	void CreateMap();
 private:
-	Location LookupLocation(std::string input);
-	std::vector<Location> prMap;
+	Location* LookupLocation(std::string input);
+	std::string oppositeDirection(std::string input);
+	std::vector<Location*> prMap;
 };
 
