@@ -8,6 +8,8 @@
 #include "MainMenu.h"
 #include "Gameplay.h"
 #include "HighScore.h"
+#include "MapGenerator.h"
+#include "Player.h"
 
 class StateManager
 {
@@ -17,6 +19,7 @@ public:
 	void Manager();
 	void MenuManager(std::string input);
 	void GameManager(std::string input);
+	void ChooseAdventure(std::string input);
 private:
 	State* prState;
 	About* prAbout;

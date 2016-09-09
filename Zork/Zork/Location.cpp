@@ -17,7 +17,12 @@ Location::~Location(){}
 // Adds a *location with a direction (key) to a map
 void Location::setPath(std::string key, Location* value)
 {
-	prPath.insert(prPath.begin(), std::make_pair(key, *value));
+	prPath.insert(prPath.begin(), std::make_pair(key, value));
+}
+
+Location* Location::returnLocation(std::string key)
+{
+	return prPath[key];
 }
 
 std::string Location::getName()

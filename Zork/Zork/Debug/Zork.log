@@ -1,7 +1,3 @@
-﻿  Zork.cpp
-  MapGenerator.cpp
-  Generating Code...
-f:\daniel\documents\code\games programming\zork\zork\mapgenerator.cpp(68): warning C4715: 'MapGenerator::LookupLocation': not all control paths return a value
-f:\daniel\documents\code\games programming\zork\zork\mapgenerator.cpp(112): warning C4715: 'MapGenerator::oppositeDirection': not all control paths return a value
-  Zork.vcxproj -> F:\Daniel\Documents\Code\Games Programming\Zork\Debug\Zork.exe
-  Zork.vcxproj -> F:\Daniel\Documents\Code\Games Programming\Zork\Debug\Zork.pdb (Full PDB)
+﻿  Player.cpp
+  Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.exe
+  Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.pdb (Full PDB)

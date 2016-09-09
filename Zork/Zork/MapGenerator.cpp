@@ -9,6 +9,7 @@ MapGenerator::MapGenerator(){}
 
 MapGenerator::~MapGenerator(){}
 
+// Reads a text file and generates locations and paths 
 void MapGenerator::CreateMap()
 {
 	std::string line;	
@@ -59,6 +60,12 @@ void MapGenerator::CreateMap()
 	file.close();
 }
 
+std::vector<Location*> MapGenerator::fetchMap()
+{
+	return prMap;
+}
+
+// Searches location name and returns if found
 Location* MapGenerator::LookupLocation(std::string input)
 {
 	for each (Location* l in prMap)
@@ -70,6 +77,7 @@ Location* MapGenerator::LookupLocation(std::string input)
 	}
 }
 
+// Returns opposite key
 std::string MapGenerator::oppositeDirection(std::string input)
 {
 	if (input == "N")

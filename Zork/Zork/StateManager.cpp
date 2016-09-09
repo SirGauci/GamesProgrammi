@@ -21,26 +21,25 @@ void StateManager::Manager()
 {
 	std::string input;
 	prState = prMenu;
+	prState->Display();
+
 	while (!(input == "5" && prState == prMenu))
 	{
+		std::getline(std::cin, input);
+		GameManager(input);
+		ChooseAdventure(input);
+		MenuManager(input);
+
 		std::system("cls");
 		prState->Display();
-
-		if (prState == prSAdventure && input == "1")
-		{
-			prState = prGame;
-		}
-
-		std::getline(std::cin, input);
-		MenuManager(input);
-		GameManager(input);
 	}
 }
 
+// Changes state from menu state
 void StateManager::MenuManager(std::string input)
 {
 	char converted = input[0];
-	if (prState == prMenu)
+	if (prState == prMenu && input.length() == 1)
 	{
 		switch (converted)
 		{
@@ -77,6 +76,7 @@ void StateManager::MenuManager(std::string input)
 	}
 }
 
+// Manages player input in game state
 void StateManager::GameManager(std::string input)
 {
 	if (prState == prGame)
@@ -85,9 +85,28 @@ void StateManager::GameManager(std::string input)
 		{
 			prState = prScore;
 		}
-		else if (input == "quit")
+		else if (input == "q")
 		{
 			prState = prMenu;
+		}
+		else
+		{
+			prGame->ProcessInput(input);
+		}
+	}
+}
+
+// Manages player input in sAdventure state
+void StateManager::ChooseAdventure(std::string input)
+{
+	if (prState == prSAdventure)
+	{
+		if (input == "1")
+		{
+			MapGenerator* map = new MapGenerator();
+			map->CreateMap();
+			prGame->CurrentMap(map->fetchMap());
+			prState = prGame;
 		}
 	}
 }
