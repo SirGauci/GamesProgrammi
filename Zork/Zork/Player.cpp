@@ -3,12 +3,16 @@
 #include <sstream>
 
 
-Player::Player(){}
+Player::Player()
+{
+	prInventory = new Inventory();
+}
 
 Player::Player(std::string name, std::string description)
 {
 	prName = name;
 	prDescription = description;
+	prInventory = new Inventory();
 }
 
 Player::~Player(){}

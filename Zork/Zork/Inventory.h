@@ -1,16 +1,18 @@
 #pragma once
 #include <vector>
+#include <string>
+#include "Item.h"
 
 class Inventory
 {
 public:
 	Inventory();
 	~Inventory();
-	void Add(int item);
-	void Remove(int item);
-	int Access(int item);
+	void Add(Item* item);
+	void Remove(std::string item);
+	Item* Access(std::string item);
 	void Display();
 private:
-	std::vector<int> prInventory;
+	std::vector<Item*> prInventory;
 };
 

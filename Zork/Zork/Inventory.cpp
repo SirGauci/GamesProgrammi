@@ -7,25 +7,25 @@ Inventory::Inventory(){}
 
 Inventory::~Inventory(){}
 
-void Inventory::Add(int item)
+void Inventory::Add(Item* item)
 {
 	prInventory.push_back(item); 
 }
 
-int Inventory::Access(int item)
+Item* Inventory::Access(std::string item)
 {
-	for (int n : prInventory)
+	for each (Item* i in prInventory)
 	{
-		if (item == n)
+		if (i->getName() == item)
 		{
-			return n;
+			return i;
 		}
 	}
 }
 
-void Inventory::Remove(int item)
+void Inventory::Remove(std::string item)
 {
-	auto it = std::find(prInventory.begin(), prInventory.end(), item);
+	auto it = std::find(prInventory.begin(), prInventory.end(), Access(item));
 
 	if (it != prInventory.end())
 	{
@@ -34,10 +34,11 @@ void Inventory::Remove(int item)
 	}
 }
 
+
 void Inventory::Display()
 {
-	for (int n : prInventory)
+	for each (Item* i in prInventory)
 	{
-		std::cout << n << "\n";
+		std::cout << i->getName();
 	}
 }

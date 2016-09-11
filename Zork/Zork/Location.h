@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include <map>
 #include <string>
+#include "Inventory.h"
 
 class Location : public GameObject
 {
@@ -15,6 +16,7 @@ public:
 private:
 	std::string prName;
 	std::string prDescription;
+	Inventory* prInventory;
 	std::map<std::string, Location*> prPath;
 };
 

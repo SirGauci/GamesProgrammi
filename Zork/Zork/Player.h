@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include <string>
 #include "Location.h"
+#include "Inventory.h"
 
 class Player : public GameObject
 {
@@ -16,5 +17,6 @@ private:
 	std::string prName;
 	std::string prDescription;
 	Location* prLocation;
+	Inventory* prInventory;
 };
 
