@@ -11,7 +11,8 @@ Gameplay::~Gameplay(){}
 
 void Gameplay::Display()
 {
-	std::cout << "You are at the " + player->CurrentLocation()->getName() + "\n";
+	std::cout << "Location :: " + player->CurrentLocation()->getName() + "\n"
+		<< "--------------------------------------------------------\n";
 }
 
 void Gameplay::CurrentMap(std::vector<Location*> map)
