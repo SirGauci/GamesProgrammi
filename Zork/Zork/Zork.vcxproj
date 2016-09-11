@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="About.h" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="CommandMove.h" />
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Gameplay.h" />
@@ -168,6 +169,7 @@
   <ItemGroup>
     <ClCompile Include="About.cpp" />
     <ClCompile Include="Command.cpp" />
+    <ClCompile Include="CommandMove.cpp" />
     <ClCompile Include="CommandProcessor.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Gameplay.cpp" />

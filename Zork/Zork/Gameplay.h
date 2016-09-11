@@ -3,6 +3,7 @@
 #include <vector>
 #include "Location.h"
 #include "Player.h"
+#include "CommandProcessor.h"
 
 class Gameplay : public State
 {
@@ -14,5 +15,6 @@ public:
 	void ProcessInput(std::string);
 private:
 	Player* player;
+	CommandProcessor* processor;
 };
 

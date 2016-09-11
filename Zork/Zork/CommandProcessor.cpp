@@ -1,12 +1,16 @@
 #include "stdafx.h"
 #include "CommandProcessor.h"
-
+#include "CommandMove.h"
 
 CommandProcessor::CommandProcessor(){}
 
 CommandProcessor::CommandProcessor(Player* player)
 {
 	prPlayer = player;
+	
+	Command* cMove = new CommandMove();
+	std::vector<std::string> vMove{ "go", "move", "walk", "run" };
+	prProcesses.insert(prProcesses.begin(), std::make_pair(vMove, cMove));
 }
 
 CommandProcessor::~CommandProcessor(){}
@@ -32,11 +36,9 @@ void CommandProcessor::Process(std::string input)
 		{
 			if (input.substr(0, input.find(' ')) == str)
 			{
-				key = keys;
+				prProcesses[keys]->Process(input, prPlayer);
 				break;
 			}
 		}
 	}
-
-	prProcesses[key]->Process(input, prPlayer);
 }

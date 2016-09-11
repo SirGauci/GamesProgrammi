@@ -5,6 +5,7 @@
 Gameplay::Gameplay()
 {
 	player = new Player();
+	processor = new CommandProcessor(player);
 }
 
 Gameplay::~Gameplay(){}
@@ -22,5 +23,5 @@ void Gameplay::CurrentMap(std::vector<Location*> map)
 
 void Gameplay::ProcessInput(std::string input)
 {
-	player->Move(input);
+	processor->Process(input);
 }
