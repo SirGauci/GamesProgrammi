@@ -20,8 +20,6 @@ void CommandProcessor::Process(std::string input)
 {
 	// List of keys from map
 	std::vector<std::vector<std::string>> keysList;
-	// Key to pass
-	std::vector<std::string> key;
 	
 	// Adds keys to map
 	for (auto imap : prProcesses)

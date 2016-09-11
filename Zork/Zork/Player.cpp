@@ -27,14 +27,6 @@ Location* Player::CurrentLocation()
 
 void Player::Move(std::string input)
 {
-	// Converts input
-	if (input.length() == 1)
-	{
-		char sToChar = toupper(input[0]);
-		std::stringstream ss;
-		ss << sToChar;
-		ss >> input;
-	}
 	if (prLocation->returnLocation(input) != NULL)
 	{
 		prLocation = prLocation->returnLocation(input);
