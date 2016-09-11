@@ -30,3 +30,8 @@ std::string Location::getName()
 {
 	return prName;
 };
+
+Inventory* Location::getInventory()
+{
+	return prInventory;
+}

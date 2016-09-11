@@ -18,7 +18,7 @@ void MapGenerator::CreateMap()
 	{
 		std::getline(file, line);
 		// Creates Locations and adds them to map
-		if (line.substr(0, line.find(' ')) != "ulink" && line.substr(0, line.find(' ')) != "dlink")
+		if (line.substr(0, line.find(' ')) != "ulink" && line.substr(0, line.find(' ')) != "dlink" && line.substr(0, line.find(' ')) != "item")
 		{
 			Location* l = new Location(line.substr(0, line.find(' ')), line.substr(line.find_first_of(" \t") + 1));
 			prMap.push_back(l);
@@ -55,6 +55,23 @@ void MapGenerator::CreateMap()
 
 			LookupLocation(stringA)->setPath(stringD, LookupLocation(stringB));
 			LookupLocation(stringB)->setPath(oppositeDirection(stringD), LookupLocation(stringA));
+		}
+		else if (line.substr(0, line.find(' ')) == "item")
+		{
+			std::string stringLoc;
+			std::string stringN;
+			std::string stringD;
+
+			line.erase(0, line.find(' ') + 1);
+			stringLoc = line.substr(0, line.find(' '));
+			line.erase(0, line.find(' ') + 1);
+			stringN = line.substr(0, line.find(' '));
+			line.erase(0, line.find(' ') + 1);
+			stringD = line;
+
+			Item* i = new Item(stringN, stringD);
+
+			LookupLocation(stringLoc)->getInventory()->Add(i);
 		}
 	}
 	file.close();

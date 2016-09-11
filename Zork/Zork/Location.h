@@ -12,6 +12,7 @@ public:
 	~Location();
 	void setPath(std::string key, Location* value);
 	Location* returnLocation(std::string key);
+	Inventory* getInventory();
 	std::string getName();
 private:
 	std::string prName;
