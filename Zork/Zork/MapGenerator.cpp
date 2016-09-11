@@ -96,22 +96,6 @@ std::string MapGenerator::oppositeDirection(std::string input)
 	{
 		return "E";
 	}
-	else if (input == "NW")
-	{
-		return "SE";
-	}
-	else if (input == "NE")
-	{
-		return "SW";
-	}
-	else if (input == "SE")
-	{
-		return "NW";
-	}
-	else if (input == "SW")
-	{
-		return "NE";
-	}
 	else if (input == "U")
 	{
 		return "D";
