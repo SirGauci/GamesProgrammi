@@ -14,6 +14,7 @@ public:
 	Location* returnLocation(std::string key);
 	Inventory* getInventory();
 	std::string getName();
+	std::string getDescription();
 private:
 	std::string prName;
 	std::string prDescription;

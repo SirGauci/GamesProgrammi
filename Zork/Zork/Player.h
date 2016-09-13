@@ -13,6 +13,7 @@ public:
 	void AssignMap(Location* start);
 	void Move(std::string input);
 	Location* CurrentLocation();
+	Inventory* getInventory();
 private:
 	std::string prName;
 	std::string prDescription;

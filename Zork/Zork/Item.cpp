@@ -16,3 +16,8 @@ std::string Item::getName()
 {
 	return prName;
 }
+
+std::string Item::getDesc()
+{
+	return prDescription;
+}

@@ -13,7 +13,9 @@ Gameplay::~Gameplay(){}
 void Gameplay::Display()
 {
 	std::cout << "Location :: " + player->CurrentLocation()->getName() + "\n"
-		<< "--------------------------------------------------------\n";
+		<< "--------------------------------------------------------\n"
+		<< processor->ReturnOutput() + "\n"
+		<< ":> ";
 }
 
 void Gameplay::CurrentMap(std::vector<Location*> map)

@@ -11,7 +11,7 @@ public:
 	void Add(Item* item);
 	void Remove(std::string item);
 	Item* Access(std::string item);
-	void Display();
+	std::string Display();
 private:
 	std::vector<Item*> prInventory;
 };

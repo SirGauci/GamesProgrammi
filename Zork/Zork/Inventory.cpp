@@ -21,6 +21,7 @@ Item* Inventory::Access(std::string item)
 			return i;
 		}
 	}
+	return NULL;
 }
 
 void Inventory::Remove(std::string item)
@@ -35,10 +36,14 @@ void Inventory::Remove(std::string item)
 }
 
 
-void Inventory::Display()
+std::string Inventory::Display()
 {
+	std::string result;
+
 	for each (Item* i in prInventory)
 	{
-		std::cout << i->getName();
+		result = "\t" + i->getName() + "\n";
 	}
+
+	return result;
 }

@@ -12,8 +12,10 @@ public:
 	CommandProcessor(Player* player);
 	~CommandProcessor();
 	void Process(std::string input);
+	std::string ReturnOutput();
 private:
 	Player* prPlayer;
+	std::string prOuput;
 	std::map<std::vector<std::string>, Command*> prProcesses;
 };
 

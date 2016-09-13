@@ -22,6 +22,9 @@ CommandMove::~CommandMove(){}
 
 void CommandMove::Process(std::string input, Player* player)
 {
+	// Location to check against
+	Location* l = player->CurrentLocation();
+
 	input = input.erase(0, input.find(' ') + 1);
 	// List of keys from map
 	std::vector<std::vector<std::string>> keysList;
@@ -40,6 +43,16 @@ void CommandMove::Process(std::string input, Player* player)
 			if (input.substr(0, input.find(' ')) == str)
 			{
 				player->Move(compass[keys]);
+				
+				// Sets ouput
+				if (l == player->CurrentLocation())
+				{
+					SetOutput("You cannot move there");
+				}
+				else
+				{
+					SetOutput("You moved " + compass[keys]);
+				}
 				break;
 			}
 		}

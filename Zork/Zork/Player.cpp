@@ -36,3 +36,8 @@ void Player::Move(std::string input)
 		prLocation = prLocation->returnLocation(input);
 	}
 }
+
+Inventory* Player::getInventory()
+{
+	return prInventory;
+}

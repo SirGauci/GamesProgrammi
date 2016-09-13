@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CommandProcessor.h"
+#include "CommandLook.h"
 #include "CommandMove.h"
 
 CommandProcessor::CommandProcessor(){}
@@ -10,7 +11,10 @@ CommandProcessor::CommandProcessor(Player* player)
 	
 	Command* cMove = new CommandMove();
 	std::vector<std::string> vMove{ "go", "move", "walk", "run" };
+	Command* cLook = new CommandLook();
+	std::vector<std::string> vLook{ "look", "stare","glance" };
 	prProcesses.insert(prProcesses.begin(), std::make_pair(vMove, cMove));
+	prProcesses.insert(prProcesses.begin(), std::make_pair(vLook, cLook));
 }
 
 CommandProcessor::~CommandProcessor(){}
@@ -35,8 +39,14 @@ void CommandProcessor::Process(std::string input)
 			if (input.substr(0, input.find(' ')) == str)
 			{
 				prProcesses[keys]->Process(input, prPlayer);
+				prOuput = prProcesses[keys]->GetOutput();
 				break;
 			}
 		}
 	}
+}
+
+std::string CommandProcessor::ReturnOutput()
+{
+	return prOuput;
 }
