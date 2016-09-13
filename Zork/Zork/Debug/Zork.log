@@ -1,3 +1,6 @@
-﻿  CommandLook.cpp
+﻿  CommandPut.cpp
+  CommandProcessor.cpp
+f:\daniel\documents\github\gamesprogrammingrepo\zork\zork\commandprocessor.cpp(34): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.exe
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.pdb (Full PDB)

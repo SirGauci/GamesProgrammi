@@ -150,6 +150,8 @@
     <ClInclude Include="CommandLook.h" />
     <ClInclude Include="CommandMove.h" />
     <ClInclude Include="CommandProcessor.h" />
+    <ClInclude Include="CommandPut.h" />
+    <ClInclude Include="CommandTake.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Gameplay.h" />
     <ClInclude Include="HallOfFame.h" />
@@ -173,6 +175,8 @@
     <ClCompile Include="CommandLook.cpp" />
     <ClCompile Include="CommandMove.cpp" />
     <ClCompile Include="CommandProcessor.cpp" />
+    <ClCompile Include="CommandPut.cpp" />
+    <ClCompile Include="CommandTake.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Gameplay.cpp" />
     <ClCompile Include="HallOfFame.cpp" />

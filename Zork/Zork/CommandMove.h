@@ -1,7 +1,5 @@
 #pragma once
 #include "Command.h"
-#include "Player.h"
-#include <string>
 #include <map>
 #include <vector>
 
