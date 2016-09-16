@@ -1,10 +1,9 @@
 #pragma once
-#include "GameObject.h"
 #include <string>
 #include "Location.h"
 #include "Inventory.h"
 
-class Player : public GameObject
+class Player
 {
 public:
 	Player();

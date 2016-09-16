@@ -87,6 +87,24 @@
     <ClInclude Include="CommandPut.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompAttackable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompDamage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompDamage_A.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompAttackable_A.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompDamage_B.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -129,9 +147,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Location.cpp">

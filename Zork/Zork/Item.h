@@ -1,8 +1,7 @@
 #pragma once
-#include "GameObject.h"
 #include <string>
 
-class Item : public GameObject
+class Item 
 {
 public:
 	Item();

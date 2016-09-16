@@ -146,12 +146,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="About.h" />
+    <ClInclude Include="CompAttackable_A.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandLook.h" />
     <ClInclude Include="CommandMove.h" />
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="CommandPut.h" />
     <ClInclude Include="CommandTake.h" />
+    <ClInclude Include="CompAttackable.h" />
+    <ClInclude Include="CompDamage.h" />
+    <ClInclude Include="CompDamage_A.h" />
+    <ClInclude Include="CompDamage_B.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Gameplay.h" />
     <ClInclude Include="HallOfFame.h" />
@@ -177,7 +183,6 @@
     <ClCompile Include="CommandProcessor.cpp" />
     <ClCompile Include="CommandPut.cpp" />
     <ClCompile Include="CommandTake.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Gameplay.cpp" />
     <ClCompile Include="HallOfFame.cpp" />
     <ClCompile Include="Help.cpp" />
