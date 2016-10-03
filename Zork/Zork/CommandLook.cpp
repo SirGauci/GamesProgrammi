@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CommandLook.h"
+#include "Bag.h"
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -34,6 +35,12 @@ void CommandLook::Process(std::string input, Player* player)
 				SetOutput(player->CurrentLocation()->getInventory()->Access(split[2])->getDesc());
 			}
 			// Player item look
+			else if (split[2] == "bag")
+			{
+				Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[2]));
+
+				SetOutput("In your bag:\n" + bag->getInventory()->Display());
+			}
 			else if (player->getInventory()->Access(split[2]) != NULL)
 			{
 				SetOutput(player->getInventory()->Access(split[2])->getDesc());

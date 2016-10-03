@@ -42,7 +42,7 @@ std::string Inventory::Display()
 
 	for each (Item* i in prInventory)
 	{
-		result = "\t" + i->getName() + "\n";
+		result += "\t" + i->getName() + "\n";
 	}
 
 	return result;

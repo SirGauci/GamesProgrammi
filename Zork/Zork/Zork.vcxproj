@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="About.h" />
+    <ClInclude Include="Bag.h" />
     <ClInclude Include="CompAttackable_A.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandLook.h" />
@@ -177,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="About.cpp" />
+    <ClCompile Include="Bag.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="CommandLook.cpp" />
     <ClCompile Include="CommandMove.cpp" />

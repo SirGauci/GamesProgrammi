@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CommandPut.h"
+#include "Bag.h"
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -30,9 +31,16 @@ void CommandPut::Process(std::string input, Player* player)
 		}
 		else if (split.capacity() == 4)
 		{
-			if (split[2] == "from" && split[3] == "inventory")
+			if (split[2] == "in" && split[3] == "inventory")
 			{
 				player->CurrentLocation()->getInventory()->Add(player->getInventory()->Access(split[1]));
+				player->getInventory()->Remove(split[1]);
+			}
+			if (split[2] == "in" && split[3] == "bag")
+			{
+				Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[3]));
+
+				bag->getInventory()->Add(bag->getInventory()->Access(split[1]));
 				player->getInventory()->Remove(split[1]);
 			}
 		}

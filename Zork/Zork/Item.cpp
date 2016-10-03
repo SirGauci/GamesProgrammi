@@ -12,6 +12,16 @@ Item::Item(std::string name, std::string description)
 
 Item::~Item(){}
 
+void Item::SetName(std::string name)
+{
+	prName = name;
+}
+
+void Item::SetDesc(std::string desc)
+{
+	prDescription = desc;
+}
+
 std::string Item::getName()
 {
 	return prName;

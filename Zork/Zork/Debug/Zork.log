@@ -1,18 +1,10 @@
-﻿  Zork.cpp
+﻿  Bag.cpp
   Generating Code...
-  Skipping... (no relevant changes detected)
-  StateManager.cpp
-  Player.cpp
-  MapGenerator.cpp
-  Location.cpp
-  Item.cpp
-  Inventory.cpp
+  Compiling...
   Gameplay.cpp
   CommandTake.cpp
   CommandPut.cpp
-  CommandProcessor.cpp
-  CommandMove.cpp
   CommandLook.cpp
-  Command.cpp
+  Generating Code...
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.exe
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.pdb (Full PDB)

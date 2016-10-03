@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CommandTake.h"
+#include "Bag.h"
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -33,6 +34,13 @@ void CommandTake::Process(std::string input, Player* player)
 			{
 				player->getInventory()->Add(player->CurrentLocation()->getInventory()->Access(split[1]));
 				player->CurrentLocation()->getInventory()->Remove(split[1]);
+			}
+			if (split[2] == "bag")
+			{
+				Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[3]));
+
+				player->getInventory()->Add(bag->getInventory()->Access(split[1]));
+				bag->getInventory()->Remove(split[1]);
 			}
 		}
 		SetOutput("You have taken the " + split[1]);

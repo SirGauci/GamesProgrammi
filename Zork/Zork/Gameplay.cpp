@@ -1,10 +1,13 @@
 #include "stdafx.h"
 #include "Gameplay.h"
+#include "Bag.h"
 #include <iostream>
 
 Gameplay::Gameplay()
 {
 	player = new Player();
+	Bag* bag = new Bag("bag", "A bag that is a bag but not actually a bag");
+	player->getInventory()->Add(bag);
 	processor = new CommandProcessor(player);
 }
 
