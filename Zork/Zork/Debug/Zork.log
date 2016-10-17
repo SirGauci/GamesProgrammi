@@ -1,10 +1,3 @@
-﻿  Bag.cpp
-  Generating Code...
-  Compiling...
-  Gameplay.cpp
-  CommandTake.cpp
-  CommandPut.cpp
-  CommandLook.cpp
-  Generating Code...
+﻿  CommandTake.cpp
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.exe
   Zork.vcxproj -> F:\Daniel\Documents\GitHub\GamesProgrammingRepo\Zork\Debug\Zork.pdb (Full PDB)

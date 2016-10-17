@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <sstream>
+#include <typeinfo>
 
 CommandTake::CommandTake(){}
 
@@ -21,7 +22,13 @@ void CommandTake::Process(std::string input, Player* player)
 		split.push_back(temp);
 	}
 
-	if (player->CurrentLocation()->getInventory()->Access(split[1]) != NULL)
+	if (split.capacity() == 4 && split[2] == "from" && split[3] == "bag")
+	{
+		Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[3]));
+		player->getInventory()->Add(bag->getInventory()->Access(split[1]));
+		bag->getInventory()->Remove(split[1]);
+	}
+	else if (player->CurrentLocation()->getInventory()->Access(split[1]) != NULL)
 	{
 		if (split.capacity() == 2)
 		{
@@ -35,18 +42,7 @@ void CommandTake::Process(std::string input, Player* player)
 				player->getInventory()->Add(player->CurrentLocation()->getInventory()->Access(split[1]));
 				player->CurrentLocation()->getInventory()->Remove(split[1]);
 			}
-			if (split[2] == "bag")
-			{
-				Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[3]));
-
-				player->getInventory()->Add(bag->getInventory()->Access(split[1]));
-				bag->getInventory()->Remove(split[1]);
-			}
 		}
 		SetOutput("You have taken the " + split[1]);
-	}
-	else
-	{
-		SetOutput("You cannot take the " + split[1]);
 	}
 }

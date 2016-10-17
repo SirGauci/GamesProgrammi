@@ -39,8 +39,7 @@ void CommandPut::Process(std::string input, Player* player)
 			if (split[2] == "in" && split[3] == "bag")
 			{
 				Bag* bag = static_cast<Bag*>(player->getInventory()->Access(split[3]));
-
-				bag->getInventory()->Add(bag->getInventory()->Access(split[1]));
+				bag->getInventory()->Add(player->getInventory()->Access(split[1]));
 				player->getInventory()->Remove(split[1]);
 			}
 		}
